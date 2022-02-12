@@ -1,7 +1,16 @@
 <template >
-        <v-card class="main px-2" >
+        <v-card class="main" >
             <Header />
-            <p>Final</p>
+            <v-row class="mx-1">
+                <v-col>
+                    <v-card 
+                        background-color="white" 
+                        height="40vh" 
+                        tile>
+
+                    </v-card>
+                </v-col>
+            </v-row>
         </v-card>
 </template>
 <script>
@@ -13,7 +22,6 @@ export default {
 </script>
 <style scoped>
 .main{
-    height:100vh;
     background-color: rgba(0, 0, 0, 0);
 }
 </style>

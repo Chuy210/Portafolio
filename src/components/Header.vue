@@ -1,60 +1,85 @@
 <template>
   <v-card class="navBar">
-    <v-app-bar dark >
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+    <v-app-bar dark tile>
+      <v-app-bar-nav-icon @click="drawerChange()"></v-app-bar-nav-icon>
+      <NavDrawer class="navigationDrawer"/>
+      <v-row class="allContent ma-0 d-flex align-center justify-center">
+        <v-col class="pa-0 d-flex align-center ">
+          <v-img 
+          src="../assets/WhiteLogo.svg"
+          max-height="82px"
+          max-width="250px"
+          class=" mb-5 ml-2"
+          style="cursor: pointer;"
+          ></v-img>
+        </v-col>
+      </v-row>
+       <v-spacer></v-spacer>
 
-      <v-toolbar-title>Omar</v-toolbar-title>
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-menu
+        left
+        bottom
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item
+            v-for="n in 5"
+            :key="n"
+            @click="() => {}"
+          >
+            <v-list-item-title>Option {{ n }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
 
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-      app
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Account</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
   </v-card>
 </template>
 <script>
+import NavDrawer from "./NavDrawer.vue"
 export default {
-    data(){
-        return{
-            drawer: false,
-            group: null,
+  components:{NavDrawer},
+  computed:{
+    drawer:{
+      get(){
+        return this.$store.state.headerModule.drawer;
+      },
+      set(data){
+        this.$store.commit('headerModule/setdrawer', data);
+      }
+    },
+  },
+  data(){
+    return{
+      //
+    }
+  },
+  methods:{
+    drawerChange(){
+      if(this.drawer){
+          this.$store.commit('headerModule/setdrawer', false);
+        }else{
+          this.$store.commit('headerModule/setdrawer', true);
         }
     }
+  }
 }
 </script>
 <style>
-.v-card > :first-child:not(.v-btn):not(.v-chip):not(.v-avatar), .v-card > .v-card__progress + :not(.v-btn):not(.v-chip):not(.v-avatar) {
-  border-top-left-radius: unset;
-  border-top-right-radius: unset;
-}
-.v-card > :last-child:not(.v-btn):not(.v-chip):not(.v-avatar) {
-  border-bottom-left-radius: unset;
-  border-bottom-right-radius: unset;
+.allContent{
+  position: inherit;
 }
 </style>
