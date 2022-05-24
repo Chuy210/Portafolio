@@ -16,7 +16,7 @@
         v-for="(n,i) in img"
         :key="i"
         class="d-flex child-flex"
-        cols="3"
+        cols="2"
       >
         <v-hover v-slot="{ hover }">
           <v-img
@@ -91,7 +91,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-
-
-</style>
