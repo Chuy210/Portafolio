@@ -1,22 +1,25 @@
 <template>
   <div class="about">
     <v-row class="mt-3">
-      <v-col class="text-center white--text">
+      <v-col class="text-center yellow--text">
         <h1>About Me</h1>
       </v-col>
     </v-row>
     <v-row class="mt-2">
       <v-col></v-col>
       <v-col  cols="10">
-        <v-card color="#01237b" :class="cardClass" sm="d-flex flex-row">
+        <v-card color="#1FAAEE" :class="cardClass" sm="d-flex flex-row">
           <v-img
           class="imgPerfil rounded-circle"
           height="250"
           max-width="250"
-          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          src="../assets/PhotoPerfil.png"
           ></v-img>
-          <v-card-title class="text-center white--text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam velit quas veniam, recusandae quae explicabo nostrum ipsam reprehenderit illo blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          <v-card-title class="titulo text-center white--text">
+            Hi. I am Jesus Omar Cervantes Gonzalez <br>
+            Frontend Developer with 1+ years of experience.<br>
+            Passionate about learning new technologies and growing professionally.<br>
+            This portfolio contains some of my work, and some projects I have done to learn new technologies.
           </v-card-title>
         </v-card>
       </v-col>

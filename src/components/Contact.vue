@@ -1,22 +1,23 @@
 <template>
-  <div class="tec my-4">
-    <v-row class="mt-2">
-      <v-col class="text-center white--text">
+  <div class="contact mt-4" >
+    <!-- <v-row class="mt-2">
+      <v-col class="text-center yellow--text">
         <h1>Contact</h1>
       </v-col>
-    </v-row>
-    <v-row v-if="hoverCont">
+    </v-row> -->
+    <v-row v-if="hoverCont" class="mt-12 mb-2">
       <v-col>
         <h2 style="color:white">{{contact}}</h2>
       </v-col>
     </v-row>
-     <v-row class="mx-1">
+     <v-row class="mx-1 my-0 " align-items="center">
        <v-col ></v-col>
       <v-col
         v-for="(n,i) in img"
         :key="i"
         class="d-flex child-flex"
-        cols="2"
+        cols="3"
+        sm="2" md="1" lg="1" xl="1"
       >
         <v-hover v-slot="{ hover }">
           <v-img
@@ -78,8 +79,8 @@ export default {
         {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Circle-icons-mail.svg/1024px-Circle-icons-mail.svg.png", contact:"jocg210@gmail.com"},
         {src:"https://es.logodownload.org/wp-content/uploads/2018/10/whatsapp-logo-11.png", contact:"8712178872"},
       ],
-      contact:"",
-      hoverCont:false,
+      contact:"jocg210@gmail.com",
+      hoverCont:true,
       snackbar:false,
     }
   },
@@ -91,3 +92,24 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.contact{
+  background-image: url("../assets/contactBg6.gif");
+  background-position-y: -130px;
+  background-size: 100vw;
+}
+
+@media only screen and (max-width: 960px) {
+.contact{
+  background-image: url("../assets/contactBg7.gif");
+  background-position-y: 0px;
+  background-size: 100%;
+}
+}
+@media only screen and (max-width: 600px) {
+.contact{
+  background-image: url("../assets/contactBg7.gif");
+  background-size: auto 100%;
+}
+}
+</style>

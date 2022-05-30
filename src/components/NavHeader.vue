@@ -20,7 +20,7 @@
         <v-col class="d-flex align-center justify-center mt-4">
           <v-avatar>
             <img
-              src="https://cdn.vuetifyjs.com/images/john.jpg"
+              src="../assets/PhotoPerfil.png"
               alt="Omar"
             >
           </v-avatar>
@@ -32,6 +32,7 @@
       <v-row class="flex-column mx-1">
         <v-col  >
           <v-btn class="my-2" color="#268E00" block :to="{name: 'home'}">Home</v-btn>
+          <v-btn class="my-2" color="#268E00" block :to="{name: 'cardCodes'}">Portfolio Apps</v-btn>
           <v-btn class="my-2" color="#268E00" block :to="{name: 'about'}">About me</v-btn>
           <v-btn class="my-2" color="#268E00" block :to="{name: 'contact'}">Contact</v-btn>
         </v-col>
