@@ -48,7 +48,7 @@
                     :src="n.src"
                     aspect-ratio="1"
                     max-width="100px"
-                    min-width="50px"
+                    min-width="30px"
                     style="border-radius: 50%"
                     class="TecImgs"
                   >
@@ -75,7 +75,7 @@
                     :src="n.src"
                     aspect-ratio="1"
                     max-width="100px"
-                    min-width="50px"
+                    min-width="30px"
                     style="border-radius: 50%"
                     class="TecImgs"
                   >
@@ -106,18 +106,16 @@ export default {
         { src: "https://cdn-icons-png.flaticon.com/512/919/919826.png" },
         { src: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
         { src: "https://cdn-icons-png.flaticon.com/512/919/919831.png" },
+      ],
+      img2: [
         {
           src: "https://assets-global.website-files.com/5e9996a6531fea7d1003b18e/61435271fbe52607ec50931d_vue.png",
         },
-      ],
-      img2: [
         { src: "https://pbs.twimg.com/media/Ei5n6vBWoAEy5gp.png" },
         {
           src: "https://download.logo.wine/logo/Zoho_Corporation/Zoho_Corporation-Logo.wine.png",
         },
         { src: "https://cdn-icons-png.flaticon.com/512/919/919827.png" },
-        { src: "https://cdn-icons-png.flaticon.com/512/919/919826.png" },
-        { src: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
       ],
     };
   },
