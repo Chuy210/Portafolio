@@ -28,6 +28,7 @@
             <v-col cols="2">
               <v-img
               src="../assets/htmlLogo.svg"
+              class="techUsed"
               >
               </v-img>
             </v-col>
