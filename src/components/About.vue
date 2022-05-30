@@ -15,12 +15,12 @@
           max-width="250"
           src="../assets/PhotoPerfil.png"
           ></v-img>
-          <v-card-title class="titulo text-center white--text">
+          <v-card-text class="titulo text-center white--text">
             Hi. I am Jesus Omar Cervantes Gonzalez <br>
             Frontend Developer with 1+ years of experience.<br>
             Passionate about learning new technologies and growing professionally.<br>
             This portfolio contains some of my work, and some projects I have done to learn new technologies.
-          </v-card-title>
+          </v-card-text>
         </v-card>
       </v-col>
       <v-col></v-col>
@@ -62,5 +62,13 @@ export default {
 <style lang="scss">
 .v-sheet:not(.v-sheet--outlined) {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.titulo{
+  font-size: 26px;
+}
+@media only screen and (max-width: 750px) {
+  .titulo{
+    font-size: 16px;
+  }
 }
 </style>
