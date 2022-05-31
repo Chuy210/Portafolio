@@ -129,7 +129,7 @@ export default {
 }
 
 .marquee {
-  height: 50vh;
+  height: 30vh;
   width: 95vw;
   overflow: hidden;
   box-sizing: border-box;
@@ -140,7 +140,7 @@ export default {
   display: block;
   width: 200%;
   position: absolute;
-  animation: marquee 20s linear infinite;
+  animation: marquee 15s linear infinite;
 }
 
 .marquee--inner:hover {
