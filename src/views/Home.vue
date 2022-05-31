@@ -7,6 +7,7 @@
     <div class="separador"/>
     <CardCodes/>
     <Contact/>
+    <Footer/>
   </v-app>
 </template>
 
@@ -16,10 +17,11 @@ import  About  from "../components/About.vue";
 import  Tec  from "../components/Tec.vue";
 import  Contact  from "../components/Contact.vue";
 import  CardCodes  from "../components/CardCodes.vue";
+import  Footer  from "../components/Footer.vue";
 export default {
   name: 'Home',
   components:{
-    NavHeader,About,Tec,Contact,CardCodes
+    NavHeader,About,Tec,Contact,CardCodes,Footer
   },
   data() {
     return {
@@ -30,8 +32,9 @@ export default {
 </script>
 <style lang="scss">
 .separador{
+  display: none;
   margin:10px 0px; 
-  background-color: #06206e;
+  background-color: #000305;
   height: 20px;
 }
 </style>

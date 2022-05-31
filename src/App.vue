@@ -11,7 +11,7 @@ html,body,#app {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #1FAAEE;
+  background-color: #06206E;
 }
 
 #nav {

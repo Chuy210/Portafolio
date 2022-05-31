@@ -1,14 +1,14 @@
 <template>
   <div class="about">
     <v-row class="mt-3">
-      <v-col class="text-center yellow--text">
+      <v-col class="text-center light-blue--text">
         <h1>About Me</h1>
       </v-col>
     </v-row>
     <v-row class="mt-2">
       <v-col></v-col>
       <v-col  cols="10">
-        <v-card color="#1FAAEE" :class="cardClass" sm="d-flex flex-row">
+        <v-card color="#06206E" :class="cardClass" sm="d-flex flex-row">
           <v-img
           class="imgPerfil rounded-circle"
           height="250"

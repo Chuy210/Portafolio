@@ -1,7 +1,7 @@
 <template>
   <div class="tec my-4">
     <v-row class="mt-2">
-      <v-col class="text-center yellow--text">
+      <v-col class="text-center light-blue--text">
         <h1>Technologies</h1>
       </v-col>
     </v-row>
