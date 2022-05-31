@@ -31,20 +31,20 @@
 
           <v-list>
             <v-list-item
-              v-for="(socials, i) in socials"
+              v-for="(social, i) in socials"
               :key="i"
-              @click="linkPage(1)"
+              @click="linkPage(social.web)"
             >
               <v-btn
-                :color="socials.color"
+                :color="social.color"
                 class="white--text"
                 fab
                 icon
                 small
               >
-                <v-icon>{{socials.icon}}</v-icon>
+                <v-icon>{{social.icon}}</v-icon>
               </v-btn>
-              <v-list-item-title>{{ socials.title }}</v-list-item-title>
+              <v-list-item-title>{{ social.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
       </v-menu>
@@ -81,22 +81,23 @@ export default {
       drawer:false,
       socials: [
         {
-          title: 'Linkedin',
+          title: 'LinkedIn',
           icon: 'mdi-linkedin',
           color: 'cyan darken-1',
+          web:'https://mx.linkedin.com/in/jesusomarcervantes'
+        },
+        {
+          title: 'Github',
+          icon: 'mdi-github',
+          color: 'grey darken-4',
+          web:'https://github.com/Chuy210/portafolio'
         },
       ],
     }
   },
   methods:{
-     linkPage(num){
-        switch (num) {
-          case 1:
-            window.open('https://mx.linkedin.com/in/jesusomarcervantes', '_blank');
-            break;
-          default:
-            break;
-        }
+     linkPage(web){
+            window.open(web, '_blank');
       },
   }
 }
