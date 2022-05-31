@@ -50,6 +50,7 @@
                     max-width="100px"
                     min-width="30px"
                     style="border-radius: 50%"
+                    :title="n.title"
                     class="TecImgs"
                   >
                     <template v-slot:placeholder>
@@ -61,6 +62,7 @@
                       </v-row>
                     </template>
                   </v-img>
+                  
                 </v-col>
               </v-row>
             </span>
@@ -77,6 +79,7 @@
                     max-width="100px"
                     min-width="30px"
                     style="border-radius: 50%"
+                    :title="n.title"
                     class="TecImgs"
                   >
                     <template v-slot:placeholder>
@@ -102,20 +105,34 @@ export default {
   data() {
     return {
       img: [
-        { src: "https://cdn-icons-png.flaticon.com/512/919/919827.png" },
-        { src: "https://cdn-icons-png.flaticon.com/512/919/919826.png" },
-        { src: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
-        { src: "https://cdn-icons-png.flaticon.com/512/919/919831.png" },
+        { 
+          title:"HTML",
+          src: "https://cdn-icons-png.flaticon.com/512/919/919827.png" },
+        { 
+          title:"CSS",
+          src: "https://cdn-icons-png.flaticon.com/512/919/919826.png" },
+        { 
+          title:"JavaScript",
+          src: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
+        { 
+          title:"SASS",
+          src: "https://cdn-icons-png.flaticon.com/512/919/919831.png" },
       ],
       img2: [
         {
+          title:"VUEJS",
           src: "https://assets-global.website-files.com/5e9996a6531fea7d1003b18e/61435271fbe52607ec50931d_vue.png",
         },
-        { src: "https://pbs.twimg.com/media/Ei5n6vBWoAEy5gp.png" },
+        { 
+          title:"VUETIFY",
+          src: "https://pbs.twimg.com/media/Ei5n6vBWoAEy5gp.png" },
         {
+          title:"ZOHO",
           src: "https://download.logo.wine/logo/Zoho_Corporation/Zoho_Corporation-Logo.wine.png",
         },
-        { src: "https://cdn-icons-png.flaticon.com/512/919/919827.png" },
+        { 
+          title:"HTML",
+          src: "https://cdn-icons-png.flaticon.com/512/919/919827.png" },
       ],
     };
   },
