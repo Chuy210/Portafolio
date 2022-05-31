@@ -488,6 +488,10 @@
   text-align: center !important;
 }
 .tarjetas{
+  &:hover{
+    opacity: .9;
+    transform: scale(1.05);
+  }
   .imagenes{
     opacity: 0.5;
   }
