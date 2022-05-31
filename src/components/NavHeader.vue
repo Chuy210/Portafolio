@@ -8,12 +8,44 @@
 
       <v-app-bar-nav-icon @click="drawer=true" class="white--text"></v-app-bar-nav-icon>
 
-      <v-toolbar-title >JESUS OMAR CERVANTES GONZALEZ</v-toolbar-title>
+      <v-toolbar-title >
+        JESUS OMAR CERVANTES GONZALEZ
+      </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-menu
+            bottom
+            left
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                dark
+                icon
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-icon>mdi-dots-vertical</v-icon>
+              </v-btn>
+            </template>
 
-      <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon class="white--text">mdi-dots-vertical</v-icon>
-      </v-btn>
+            <v-list>
+              <v-list-item
+                v-for="(socials, i) in socials"
+                :key="i"
+                @click="linkPage(1)"
+              >
+                <v-btn
+                  :color="socials.color"
+                  class="white--text"
+                  fab
+                  icon
+                  small
+                >
+                  <v-icon>{{socials.icon}}</v-icon>
+                </v-btn>
+                <v-list-item-title>{{ socials.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+        </v-menu>
     </v-toolbar>
     <v-navigation-drawer app v-model="drawer" temporary dark>
       <v-row class="flex-column">
@@ -44,8 +76,26 @@
 export default {
   data() {
     return {
-      drawer:false
+      drawer:false,
+      socials: [
+        {
+          title: 'Linkedin',
+          icon: 'mdi-linkedin',
+          color: 'cyan darken-1',
+        },
+      ],
     }
   },
+  methods:{
+     linkPage(num){
+        switch (num) {
+          case 1:
+            window.open('https://mx.linkedin.com/in/jesusomarcervantes', '_blank');
+            break;
+          default:
+            break;
+        }
+      },
+  }
 }
 </script>
